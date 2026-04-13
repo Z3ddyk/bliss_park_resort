@@ -3,7 +3,7 @@ $page_title = "Our Rooms";
 if (session_status() === PHP_SESSION_NONE) session_start();
 include("includes/db.php");
 
-// Auto-update rooms: mark as available if booking checkout has passed
+// Auto-update rooms:
 $today = date('Y-m-d');
 $updateRooms = $conn->prepare("UPDATE rooms r JOIN bookings b ON r.room_id = b.room_id 
                                 SET r.status = 'available' 

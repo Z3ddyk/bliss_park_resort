@@ -10,7 +10,7 @@ if (isset($_SESSION['user_id'])) {
 $message = "";
 $msg_type = "";
 
-// Process registration form (POST method - Lesson 10)
+// Process registration form 
 if (isset($_POST['register'])) {
     $full_name = trim($_POST['full_name']);
     $email = trim($_POST['email']);
@@ -18,7 +18,7 @@ if (isset($_POST['register'])) {
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    // Server-side validation (Lesson 9 - PHP control structures)
+    // Server-side validation
     if (strlen($full_name) < 3) {
         $message = "Full name must be at least 3 characters.";
         $msg_type = "error";
@@ -29,7 +29,7 @@ if (isset($_POST['register'])) {
         $message = "Password must be at least 6 characters.";
         $msg_type = "error";
     } else {
-        // Check if email already exists (Prepared statement)
+        // Check if email already exists 
         $check = $conn->prepare("SELECT user_id FROM users WHERE email = ?");
         $check->bind_param("s", $email);
         $check->execute();
@@ -42,7 +42,7 @@ if (isset($_POST['register'])) {
             // Hash password for security
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            // Insert new user (Prepared statement - Lesson 10)
+            // Insert new user 
             $stmt = $conn->prepare("INSERT INTO users (full_name, email, phone, password, role) VALUES (?, ?, ?, ?, 'guest')");
             $stmt->bind_param("ssss", $full_name, $email, $phone, $hashed_password);
 

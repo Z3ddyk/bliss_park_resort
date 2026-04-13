@@ -5,7 +5,7 @@ include("includes/db.php");
 $message = "";
 $msg_type = "";
 
-// Process contact form (POST method - Lesson 10)
+// Process contact form 
 if (isset($_POST['send_message'])) {
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
@@ -17,7 +17,7 @@ if (isset($_POST['send_message'])) {
         $message = "Please fill in all fields properly.";
         $msg_type = "error";
     } else {
-        // Insert message into database (Prepared statement)
+        // Insert message into database 
         $stmt = $conn->prepare("INSERT INTO contact_messages (name, email, subject, message) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $name, $email, $subject, $msg);
 

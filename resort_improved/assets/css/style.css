@@ -1,10 +1,4 @@
-/* =====================================================
-   Bliss Park Resort - Stylesheet
-   Topics covered: CSS Selectors, Box Model, Flexbox, 
-   Grid, Transitions, Media Queries (Lesson 5)
-   ===================================================== */
 
-/* --- CSS Variables (Custom Properties) --- */
 :root {
     --primary: #1a6b4a;
     --primary-light: #2d9d6f;
@@ -130,10 +124,13 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* --- Hero Section --- */
 .hero {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--white);
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 8rem 2rem;
     margin-bottom: 2rem;
 }
 .hero h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }

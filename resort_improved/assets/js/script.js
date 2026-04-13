@@ -1,16 +1,12 @@
-/* =====================================================
-   Bliss Park Resort - JavaScript
-   Topics: Variables, Functions, Events, DOM, 
-   Control Flow, Validation (Lessons 6, 7, 8)
-   ===================================================== */
 
-// --- Navigation Toggle (Event Handling - Lesson 8) ---
+
+// --- Navigation Toggle 
 function toggleNav() {
     var navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('show');
 }
 
-// --- Form Validation (Functions & Events - Lesson 8) ---
+// --- Form Validation 
 
 // Registration Form Validation
 function validateRegistration() {
@@ -26,7 +22,7 @@ function validateRegistration() {
         return false;
     }
 
-    // Validate email format using indexOf (Lesson 7 - control flow)
+    // Validate email format using indexOf 
     if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
         alert('Please enter a valid email address.');
         return false;
@@ -44,7 +40,7 @@ function validateRegistration() {
         return false;
     }
 
-    // Confirm passwords match (Lesson 7 - if/else)
+    // Confirm passwords match 
     if (password !== confirmPassword) {
         alert('Passwords do not match!');
         return false;
@@ -104,7 +100,7 @@ function validateContact() {
     return true;
 }
 
-// --- Dynamic Price Calculator (Functions - Lesson 8) ---
+// --- Dynamic Price Calculator -
 function calculateTotal() {
     var checkIn = document.getElementById('check_in');
     var checkOut = document.getElementById('check_out');

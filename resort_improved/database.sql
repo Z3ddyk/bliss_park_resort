@@ -1,8 +1,5 @@
 -- =====================================================
--- Bliss Park Resort - Database Schema
--- Run this in phpMyAdmin or MySQL CLI
--- =====================================================
-
+-- Database: resort_management
 CREATE DATABASE IF NOT EXISTS resort_management;
 USE resort_management;
 
@@ -119,6 +116,4 @@ INSERT INTO rooms (room_name, type_id, price_per_night, description, image_url, 
 ('Villa 1', 5, 25000.00, 'Beachfront honeymoon villa with private pool.', 'room-villa.jpg', 'available'),
 ('Villa 2', 5, 25000.00, 'Garden honeymoon villa with hot tub.', 'room-villa.jpg', 'available');
 
--- NOTE: To create the admin user with proper password hash, 
--- visit hash.php in your browser first, then update the admin password in the database.
--- Or use: UPDATE users SET password='$2y$10$...' WHERE email='admin@blisspark.com';
+-- =====================================================

@@ -29,7 +29,7 @@ if (!$room || $room['status'] != 'available') {
 $message = "";
 $msg_type = "";
 
-// Process booking form (POST method - Lesson 10)
+// Process booking form 
 if (isset($_POST['book'])) {
     $user_id = $_SESSION['user_id'];
     $check_in = $_POST['check_in'];

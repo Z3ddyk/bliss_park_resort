@@ -1,13 +1,6 @@
 <?php
 /**
- * Password Hash Generator
- * 
- * Usage: Open this file in your browser to generate a hashed password.
- * Then copy the hash and update the admin user in the database:
- * 
- * UPDATE users SET password='<paste_hash_here>' WHERE email='admin@blisspark.com';
- * 
- * Delete this file from production server after use!
+ 
  */
 
 $password = "admin123"; // Change this to your desired admin password
